@@ -9,7 +9,9 @@
 {% endblock %}
 
 {% block body %}
-    {{ form_start(registrationForm) }}
+    {{ form_start(registrationForm, {
+        attr: { class: 'form-signin' }
+    }) }}
         {{ form_widget(registrationForm) }}
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">
