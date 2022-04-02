@@ -181,7 +181,7 @@ class User implements UserInterface
 
     public function getAvatarUrl(int $size = null): string
     {
-        $url = 'https://robohash.org/'.$this->getEmail();
+        $url = 'https://robohash.org/' . $this->getEmail();
 
         if ($size) {
             $url .= sprintf('?size=%dx%d', $size, $size);
@@ -262,10 +262,8 @@ class User implements UserInterface
         return $this->agreedTermsAt;
     }
 
-    public function setAgreedTermsAt(\DateTimeInterface $agreedTermsAt): self
+    public function agreeTerms()
     {
-        $this->agreedTermsAt = $agreedTermsAt;
-
-        return $this;
+        $this->agreedTermsAt = new \DateTime();
     }
 }
