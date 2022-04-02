@@ -1,9 +1,9 @@
 {% extends 'content_base.html.twig' %}
 
 {% block content_body %}
-    <h1>Launch a new Article! <i class="fa fa-rocket" style="color: red" aria-hidden="true"></i></h1>
+    <h1>Edit the Article! <i class="fa fa-rocket" style="color: red" aria-hidden="true"></i></h1>
 
     {{ include('article_admin/_form.html.twig', {
-       button_text: 'Create!'
+        button_text: 'Update!'
     }) }}
 {% endblock %}
